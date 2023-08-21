@@ -14,7 +14,7 @@ if (isset($_GET['cid'])) {
     if ($result->num_rows === 1) {
         $cakeDetail = $result->fetch_assoc();
 
-        // 將詳細資訊轉換為JSON格式並返回給AJAX請求
+        // 將詳細資訊轉換為JSON格式並返回給AJAX
         echo json_encode($cakeDetail);
     } else {
         // 若未找到對應產品，回傳空JSON物件

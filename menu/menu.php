@@ -156,7 +156,7 @@ $result = $stmt->get_result();
         fetch(`php/menu/kindfilter.php?kind=${kind}`)
             .then(response => response.json())
             .then(sortedCakes => {
-                // 更新全局变量的值
+                // 更新種類全域變數
                 selectedKind = kind;
                 renderCakes(sortedCakes);
             })

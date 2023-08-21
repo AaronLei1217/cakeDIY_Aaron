@@ -203,14 +203,8 @@ $cakeDetail = $result->fetch_assoc();
         <div id="Tokyo" class="tabcontent">
             <h1 id="experience">製作心得</h1>
                 
-            
                 <div class="detailContainer22" id="expBlock">
-                    <!-- <h4>userName</h4>
-                    <pre>分享這次DIY的過程，非常有趣</pre>
-                    <div class="expImgBlock">
-                        <img src="../image/mainImg/mainImg1.jpg">
-                    </div>
-                    <p>2023/7/10 10:00:00</p> -->
+                    
                 </div>
 
                 <h1 id="expText">分享心得與照片</h1>
@@ -273,21 +267,20 @@ $cakeDetail = $result->fetch_assoc();
 
 <script>
  function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen").click();
 
 
 </script>

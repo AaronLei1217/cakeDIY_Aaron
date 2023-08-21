@@ -1,7 +1,7 @@
 <?php
 require_once('../db2.php');
 
-// 获取从前端传递过来的查询种类参数
+// 獲取前端參數
 $kind = $_REQUEST['kind'];
 
 $sql = '';
@@ -26,10 +26,8 @@ while ($row = $result->fetch_assoc()) {
     $cakes[] = $row;
 }
 
-// 设置响应头部，指定返回的是 JSON 格式的数据
+// 設定header 指定回傳的格式
 header('Content-Type: application/json');
 
-// 将查询结果转换为 JSON 格式并返回给 AJAX 请求
-// var_dump($cakes);
 echo json_encode($cakes);
 ?>
