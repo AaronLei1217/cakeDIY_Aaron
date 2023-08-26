@@ -181,26 +181,26 @@ $cakeDetail = $result->fetch_assoc();
             <!-- Detail Content Block -->
             <section class="detailContent">
             <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">詳細內容</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">使用材料</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">製作心得</button>
+        <button class="tablinks" onclick="detTab(event, 'det')" id="defaultOpen">詳細內容</button>
+        <button class="tablinks" onclick="detTab(event, 'met')">使用材料</button>
+        <button class="tablinks" onclick="detTab(event, 'share')">製作心得</button>
     </div>
     <section class="detailContent">
-        <div id="London" class="tabcontent">
+        <div id="det" class="tabcontent">
             <h1 id="detail">詳細內容</h1>
                 <div class="detailContainer22">
                     <pre>　　<?php echo $cakeDetail['feature']; ?></pre>
                 </div>
         </div>
 
-        <div id="Paris" class="tabcontent">
+        <div id="met" class="tabcontent">
             <h1 id="material">使用材料</h1>
             <div class="detailContainer22">
                 <pre><?php echo $cakeDetail['material']; ?></pre>
             </div>
         </div>
 
-        <div id="Tokyo" class="tabcontent">
+        <div id="share" class="tabcontent">
             <h1 id="experience">製作心得</h1>
                 
                 <div class="detailContainer22" id="expBlock">
@@ -266,7 +266,7 @@ $cakeDetail = $result->fetch_assoc();
 <script src="../resources/js/Carousel.js"></script>
 
 <script>
- function openCity(evt, cityName) {
+ function detTab(evt, tabItem) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
